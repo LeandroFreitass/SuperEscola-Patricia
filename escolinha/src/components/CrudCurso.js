@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import './CrudCurso.css';
+import axios from 'axios';
 import Main from './template/Main';
 
 const title = "Cadastro de Cursos";
 
 const urlAPI = "http://localhost:5205/api/curso";
-const initialState =
-{
+const initialState = {
     curso: { id: 0, nome: '', codCurso: 0 },
     lista: []
 } 
@@ -39,10 +38,10 @@ export default class CrudCurso extends Component {
             })
     }
 
-    getListaAtualizada(curso) {
+    getListaAtualizada(curso, add = true) {
         const lista = this.state.lista.filter(a => a.id !== curso.id);
-        lista.unshift(curso)
-        return lista
+        if (add) lista.unshift(curso);
+        return lista;
     }
 
     atualizarCampo(event) {
@@ -61,21 +60,14 @@ export default class CrudCurso extends Component {
         this.setState({curso})
     }
 
-    remover(curso)
-    {
-        
+    remover(curso) {
         const url = urlAPI + "/" + curso.id;
-        
-        if(window.confirm("Confirma remoção do curso: "+ curso.nome))
-        {
-            console.log("entrou no confrim");
-
+        if (window.confirm("Confirma remoção do curso: " + curso.nome)) {
             axios['delete'](url, curso)
-                .then(resp =>
-                    {
-                        const lista = this.getListaAtualizada(curso, true)
-                        this.setState({curso: initialState.curso, lista})
-                    })
+                .then(resp => {
+                    const lista = this.getListaAtualizada(curso, false)
+                    this.setState({ curso: initialState.curso, lista })
+                })
         }
     }
 

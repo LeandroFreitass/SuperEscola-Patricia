@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "n3MhCLLjDd5CGPFV0y4XQHVvLrFISZQIziptShzXm9bhSrnG1IAoXtnTl4lG5qUXZWD3HTvopnjSH/CN51q9sA==",
+  "dgSpecHash": "yoo8cTta6Ehr+xGQTHLP03R6yprw3tJ3aWKWpBZR2YbbqMUk2SZn9OmXXxrW0KnSCf804C2KInqOmQpcux2jeA==",
   "success": true,
-  "projectFilePath": "/Users/u21101/Downloads/SuperEscola-5de28a7014aaac9c426fd889b1a058bb3895678f/ProjetoEscola_API/ProjetoEscola_API.csproj",
+  "projectFilePath": "/Users/u21101/Downloads/SuperEscola-Patricia/ProjetoEscola_API/ProjetoEscola_API.csproj",
   "expectedPackageFiles": [
     "/Users/u21101/.nuget/packages/microsoft.csharp/4.5.0/microsoft.csharp.4.5.0.nupkg.sha512",
     "/Users/u21101/.nuget/packages/microsoft.data.sqlclient/2.1.4/microsoft.data.sqlclient.2.1.4.nupkg.sha512",
